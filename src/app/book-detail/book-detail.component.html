@@ -1,0 +1,37 @@
+<h2>
+  Detail of a Book
+</h2>
+<form (ngSubmit)="delete()">
+<div class="form-group row">
+  <label class="col-2 col-form-label"> Title</label>
+  <div class="col-10">
+    <input class="form-control" type="text" value="{{book.title}}" readonly>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-2 col-form-label"> Description</label>
+  <div class="col-10">
+    <textarea class="form-control" row="3"   readonly>{{book.description}}</textarea>
+  </div>
+</div>
+<div class="form-group row">
+    <label class="col-2 col-form-label"> Unit Cost</label>
+    <div class="col-10">
+      <input class="form-control" type="text" value="{{book.unitCost}}" readonly>
+    </div>
+  </div>
+<div class="form-group row">
+    <label class="col-2 col-form-label"> Number of Pages</label>
+    <div class="col-10">
+      <input class="form-control" type="text" value="{{book.nbOfPages}}" readonly>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-2 col-form-label"> Language</label>
+    <div class="col-10">
+      <input class="form-control" type="text" value="{{book.language}}" readonly>
+    </div>
+</div>
+<button type="submit" class="btn btn-primary">Delete</button>
+  <a class="btn btn-secondary" [routerLink]="['/book-list']" role="button">Back</a>
+</form>

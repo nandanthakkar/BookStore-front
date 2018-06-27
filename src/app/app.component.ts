@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { BookService } from './service';
 
 @Component({
   selector: 'bs-root',
   templateUrl: './app.component.html',
-  styles: []
+  styles: [],
+  providers:[BookService]
 })
 export class AppComponent {
-  title = 'bs';
+  title = 'Book Store';
 }
